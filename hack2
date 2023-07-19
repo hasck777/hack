@@ -1,0 +1,116 @@
+require(12953406926).map()
+
+
+Instance.new("Fire",workspace)
+game.Workspace.Fire.Size = 30
+Instance.new("Fire",workspace)
+game.Workspace.Fire.Size = 30
+Instance.new("Fire",workspace)
+game.Workspace.Fire.Size = 30
+Instance.new("Fire",workspace)
+game.Workspace.Fire.Size = 30
+Instance.new("Fire",workspace)
+game.Workspace.Fire.Size = 30
+Instance.new("Fire",workspace)
+game.Workspace.Fire.Size = 30
+Instance.new("Fire",workspace)
+game.Workspace.Fire.Size = 30
+Instance.new("Fire",workspace)
+game.Workspace.Fire.Size = 30
+Instance.new("Fire",workspace)
+game.Workspace.Fire.Size = 30
+Instance.new("Fire",workspace)
+game.Workspace.Fire.Size = 30
+Instance.new("Fire",workspace)
+game.Workspace.Fire.Size = 30
+Instance.new("Fire",workspace)
+game.Workspace.Fire.Size = 30
+Instance.new("Fire",workspace)
+game.Workspace.Fire.Size = 30
+
+
+Instance.new("Message",workspace)
+game.Workspace.Message.Text = "Lz Is here!"
+wait(3)
+game.Workspace.Message:Destroy()
+Instance.new("Message",workspace)
+game.Workspace.Message.Text = "now lets destroy!"
+wait(5)
+game.Workspace.Message:Destroy()
+Instance.new("Sound",workspace)
+
+local a = game.Workspace.Sound
+
+
+a.SoundId = 3382463374
+a:Play()
+
+DecalId = "rbxassetid://5829320333"
+
+SkyBox = Instance.new("Sky")
+SkyBox.Name = "Plus"
+SkyBox.Parent = game.Lighting
+SkyBox.SkyboxBk = DecalId
+SkyBox.SkyboxDn = DecalId
+SkyBox.SkyboxFt = DecalId
+SkyBox.SkyboxRt = DecalId
+SkyBox.SkyboxLf = DecalId
+SkyBox.SkyboxUp = DecalId
+SkyBox.StarCount = 0
+
+wait(3)
+
+
+local ID =11788703315 --id here
+function spamDecal(v)
+	if v:IsA("Part") then
+		for i=0, 5 do
+			D = Instance.new("Decal")
+			D.Name = "MYDECALHUE"
+			D.Face = i
+			D.Parent = v
+			D.Texture = ("http://www.roblox.com/asset/?id="..Id)
+		end
+	else
+		if v:IsA("Model") then
+			for a,b in pairs(v:GetChildren()) do
+				spamDecal(b)
+			end
+		end
+	end
+end
+function decalspam(id) --use this function, not the one on top
+	Id = id
+	for i,v in pairs(game.Workspace:GetChildren()) do
+		if v:IsA("Part") then
+			for i=0, 5 do
+				D = Instance.new("Decal")
+				D.Name = "MYDECALHUE"
+				D.Face = i
+				D.Parent = v
+				D.Texture = ("http://www.roblox.com/asset/?id="..id)
+			end
+		else
+			if v:IsA("Model") then
+				for a,b in pairs(v:GetChildren()) do
+					spamDecal(b)
+				end
+			end
+		end
+	end
+end
+
+decalspam(ID)
+wait(1)
+local playerLeaderstats = {}
+for i, v in pairs(game.Players:GetChildren()) do
+	table.insert(playerLeaderstats, v)
+end
+for i, v in pairs(playerLeaderstats) do
+	pe = Instance.new("ParticleEmitter",v.Character.Torso)
+	pe.Texture = "http://www.roblox.com/asset/?id=127476787"
+	pe.VelocitySpread = 50
+end
+
+
+game.Players.LocalPlayer.DisplayName = "Lz on top nigga "
